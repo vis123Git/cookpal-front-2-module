@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inter;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin-bottom: 10px;
+  padding-inline: 30px;
+
+  z-index: 1000;
+  background-color: white;
+}
+
+.mobile-drawer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.mobile-drawer > a {
+  text-align: center;
+  text-decoration: none;
+  padding-left: 20px;
+  margin-inline: 20px;
+  color: #253d4e;
+}
+
+.mobile-drawer > a:hover {
+  color: #509e2f;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Hero section styles */
+.hero-section {
+  width: 90vw;
+  height: 50vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 15px;
+  background-image: url(assets/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.hero-subheading {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  padding: 5px 0px;
+}
+
+.hero-subheading > p:first-child {
+  color: #dc582a;
+  font-size: 24px;
+}
+
+.hero-subheading > h3 {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  text-align: left;
+}
+
+.hero-subheading > p:last-child {
+  color: white;
+  font-size: 20px;
+}
+
+.search-section {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.search-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin: 0;
+  margin-top: 10px;
+
+}
+
+.search-input {
+  flex: 11;
+  border: none;
+  outline: none;
+  border-radius: 0px, 2px, 2px, 0px;
+}
+.search-div > button {
+  background-color: #509E2F;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0px 10px;
+  margin: 0;
+  width: auto;
+}
+
+
+::placeholder {
+  font-size: 14px;
+  color: rgb(153, 153, 153);
+}
+
+
+
+.recipes-buttons{
+  width: 90vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+
+.recipes-buttons>button{
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 15px 10px;
+  border: none;
+}
+
+.all-recipes{
+  background-color:#EAAA00 ;
+  color: white;
+}
+
+
+.all-veg-recipes{
+  background-color:#C4D600;
+  color: white;
+}
+
+.all-nonveg-recipes{
+  background-color:#DC582A;
+  color: white;
+}
+
+
+
+
+/* recipes card list design */
+.display-items {
+  width: 90vw;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.filter-bar {
+  width: 20%; 
+  position: sticky;
+  top: 30px;
+  margin-right: 20px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-bar>div{
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.filter-bar>div>input{
+  margin-right: 5px;
+}
+
+.filter-bar>div>input[type="checkbox"] {
+  background-color: green;
+}
+
+.filter-bar>div>input[type="checkbox"]:checked {
+  background-color: green;
+}
+
+.items {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.recipe-card {
+  width: 30%;
+  margin: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.recipe-image {
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.recipe-name {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+
+.recipe-details {
+  margin-top: 10px;
+}
+
+.recipe-type {
+  font-weight: bold;
+  color: #4CAF50; 
+}
+
+.recipe-time {
+  font-style: italic;
+}
+
+.recipe-ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-stars {
+  color: yellow;
+}
+
+.recipe-like {
+  color: red;
+}
+
+.recipe-comment {
+  margin-top: 10px;
+}
+ 
+/* Styles for smaller screens (mobile) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .mobile-drawer {
+    display: none;
+  }
+
+  #userprofile {
+    display: block;
+  }
+
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%; 
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    z-index: 1000; 
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); 
+  }
+
+  .mobile-drawer.active {
+    transform: translateX(0); 
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff; 
+    font-size: 24px;
+    margin-right: 20px; 
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Styles for the mobile navigation menu */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .mobile-drawer {
+    display: none;
+  }
+
+  #userprofile {
+    display: block;
+  }
+
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .mobile-drawer.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+  }
+
+
+  .display-items {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .filter-bar{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .filter-bar>h4{
+    display: inline;
+
+
+  }
+}
